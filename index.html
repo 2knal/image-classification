@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ML - Pipeline</title>
+</head>
+<body>
+    <div class="container">
+        <div class="upload">
+            <div class="card">
+                <div class="label-name" contenteditable="true">Class 1</div>
+                <div class="content">
+                    <button class="btn" id='s-class-1' onclick='startVideo(this)'>Start webcam</button>
+                    <div class="btn-group" id='g-class-1' style='display: none'>
+                        <button class="btn" onclick='clickPhotos(this)'>Hold button</button>
+                        <button class="btn" onclick='stopVideo(this)'>Stop</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="label-name" contenteditable="true">Class 2</div>
+                <div class="content">
+                    <button class="btn" id='s-class-2' onclick='startVideo(this)'>Start webcam</button>
+                    <div class="btn-group" id='g-class-2' style='display: none'>
+                        <button class="btn" onclick='clickPhotos(this)'>Hold button</button>
+                        <button class="btn" onclick='stopVideo(this)'>Stop</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id='add-label'>
+                <p style='cursor: pointer' onclick='addLabel()'>Add Label</p>
+            </div>
+        </div>
+        <div class="rest">
+            <div class="card" id='train'>
+                <div class="dropdown">
+                    <button class="dropbtn">Select model</button>
+                    <div class="dropdown-content">
+                        <a href="#">MobileNet</a>
+                        <a href="#">FaceAPI</a>
+                        <a href="#">YOLO</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" onclick='trainModel()'>Train model</button>
+                </div>
+            </div>
+            <div class="card" id='preview'>
+                <button class="btn" onclick='evaluateModel()'>Evaluate</button>
+                <div class="result"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
